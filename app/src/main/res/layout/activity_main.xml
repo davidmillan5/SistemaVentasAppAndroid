@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sistema de Ventas - Vendedor"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Identificación"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        />
+    <EditText
+        android:id="@+id/etidseller"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:hint="identificación"
+        android:inputType="number"
+        android:gravity="center"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre Completo"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        />
+    <EditText
+        android:id="@+id/etfullname"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:hint="Nombre completo"
+        android:inputType="textPersonName"
+        android:gravity="center"
+        android:drawableStart="@drawable/ic_baseline_person_24"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Correo Electrónico"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        />
+    <EditText
+        android:id="@+id/etemail"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:hint="Correo electrónico"
+        android:gravity="center"
+        android:inputType="textEmailAddress"
+        android:drawableStart="@drawable/ic_baseline_email_24"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contraseña"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        />
+    <EditText
+        android:id="@+id/etpassword"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:hint="Contraseña"
+        android:gravity="center"
+        android:inputType="textPassword"
+        android:drawableStart="@drawable/ic_baseline_vpn_key_24"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Comisión"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        />
+    <TextView
+        android:id="@+id/tvtotcomision"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        >
+        <ImageButton
+            android:id="@+id/btnsave"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_save_24"/>
+        <ImageButton
+            android:layout_marginLeft="20dp"
+            android:id="@+id/btnsearch"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_person_search_24"/>
+        <ImageButton
+            android:layout_marginLeft="20dp"
+            android:id="@+id/btnedit"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_edit_24"/>
+        <ImageButton
+            android:layout_marginLeft="20dp"
+            android:id="@+id/btndelete"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_delete_24"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+
+        <ImageButton
+            android:id="@+id/btnsales"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_point_of_sale_24"
+            ></ImageButton>
+
+    </LinearLayout>
+
+</LinearLayout>

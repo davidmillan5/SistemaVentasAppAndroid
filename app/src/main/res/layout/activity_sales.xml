@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".sales"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sistema de Ventas - Vendedor"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Identificación"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        />
+    <EditText
+        android:id="@+id/etidsellers"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:hint="identificación"
+        android:inputType="number"
+        android:gravity="center"
+        android:enabled="false"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre Completo"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        />
+    <EditText
+        android:id="@+id/etfullnames"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:hint="Nombre completo"
+        android:inputType="textPersonName"
+        android:gravity="center"
+        android:drawableStart="@drawable/ic_baseline_person_24"
+        android:enabled="false"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fecha Venta"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        />
+    <EditText
+        android:id="@+id/etdatesale"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:hint="Fecha Venta"
+        android:gravity="center"
+        android:inputType="date"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Valor Venta"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        />
+    <EditText
+        android:id="@+id/etsalevalue"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:hint="Valor Venta"
+        android:gravity="center"
+        android:inputType="number"
+
+        />
+
+
+        <Button
+            android:id="@+id/btnregistersale"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Registrar"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            />
+
+
+    <Button
+        android:id="@+id/btnback"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Regresar"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        />
+
+</LinearLayout>
