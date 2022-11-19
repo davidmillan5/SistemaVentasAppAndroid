@@ -3,6 +3,7 @@ package com.example.sistemaventas;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -43,6 +44,36 @@ public class MainActivity extends AppCompatActivity {
         btnedit.setEnabled(false);
         btndelete.setEnabled(false);
         btnsales.setEnabled(false);
+
+        //Eventos
+        btnsales.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Buscar la identificacion en pantalla
+                SQLiteDatabase dbr = sohSales.getReadableDatabase();
+                //Generar una variable que contenga la instrucción para la busqueda por idseller
+                String query = "SELECT idseller FROM seller WHERE idseller = '" + idseller.getText().toString() + "'";
+                //Generar tabla cursor
+                Cursor cursorSearch = dbr.rawQuery(query, null);
+                //Chequear si la tabla al menos tiene un registro (si no lo encuentra)
+                if (cursorSearch.moveToFirst()) {
+                    //Generar un objeto basado en la clase intent para cambiar de pantalla (Activity)
+                    //startActivity(new Intent(getApplicationContext(), sales.class));
+                    // Pasar la identificación y el nombre para la actividad de ventas (sales)
+                    Intent iSales = new Intent(getApplicationContext(),sales.class);
+                    iSales.putExtra("midseller",idseller.getText().toString());
+                    iSales.putExtra("mfullname",fullname.getText().toString());
+                    startActivity(iSales);
+
+
+                }else{
+                    Toast.makeText(getApplicationContext(),"Id Vendedor no existe ...",Toast.LENGTH_SHORT).show();
+                }
+
+            }
+        });
+
+
 
 
         //Eventos
